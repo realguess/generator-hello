@@ -39,6 +39,11 @@ var HelloGenerator = yeoman.generators.Base.extend({
     }.bind(this));
   },
 
+  // Hidden property
+  _dontAskFor: function () {
+    this.mkdir('hidden'); // Will not be invoked during generating
+  },
+
   app: function () {
     this.mkdir('app');
     this.mkdir('app/templates');
